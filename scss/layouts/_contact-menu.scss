@@ -1,0 +1,104 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a292970;
+
+
+       &.is-hidden {
+        opacity: 0;
+        /*робить вікно прозорим*/
+        visibility: hidden;
+        /*ховає вікно*/
+        pointer-events: none;
+        /*- робить нажаття на модальне меню недоступним */
+    }
+}
+
+.contact-modal {
+    position: relative;
+    width: 100%;
+    max-width: 723px;
+    height: 100%;
+    background-color: var(--color-white);
+    border: 1px solid black;
+    max-height: 500px;
+
+    padding: 96px 24px;
+    margin: 0 10px;
+    overflow-y: auto;
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 42px 144px;
+        margin: 0;
+    }
+}
+
+.contact-modal-btn-close {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.btn-close-icon {
+    height: 32px;
+    fill: var(--color-primary-light);
+    background-color: transparent;
+
+    &:hover {
+        fill: black;
+    }
+}
+
+.modal-title {
+    text-align: center;
+}
+
+.modal-text {
+    font-size: 18px;
+    text-align: center;
+    margin: 30px;
+}
+
+.modal-tel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+} 
+
+.modal-tel-link {
+    color:var(--color-primary-light);
+    text-align: center;
+
+    &:hover {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+.modal-social-conteiner {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.modal-social-icon {
+    fill: var(--color-primary-light);
+
+    &:hover {
+        fill: black;
+    }
+}

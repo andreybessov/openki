@@ -1,0 +1,32 @@
+.modal-team-conteiner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a292970;
+    transform: translate(100%);
+    transition: transform .3s;
+
+    &.is-open {
+     transform: translate(0);
+    }
+}
+
+.modal-team {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    height: 100%;
+    background-color: var(--color-white);
+    border: 1px solid black;
+    max-height: 650px;
+    padding: 96px 24px;
+    margin: 0 10px;
+    overflow-y: auto;
+}
+
